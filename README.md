@@ -10,3 +10,4 @@ Captcha interactivo inspirado en Google reCAPTCHA con un minijuego tipo Flappy B
 
 ## Demo
 GitHub Pages:
+https://lopezdev7.github.io/flappy-captcha/
