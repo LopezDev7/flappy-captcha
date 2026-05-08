@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reCAPTCHA</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- WIDGET reCAPTCHA -->
+    <div class="captcha-widget" id="captchaWidget">
+        <div class="widget-main">
+            <div class="checkbox-wrapper">
+                <div class="checkbox" id="checkbox">
+                    <svg class="checkmark-icon" viewBox="0 0 24 24" width="14" height="14">
+                        <path fill="#fff" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                </div>
+                <div class="spinner"></div>
+            </div>
+            <div class="widget-text-row">
+                <span class="widget-label">No soy un robot</span>
+            </div>
+            <div class="widget-logo-wrapper">
+                <img src="src/recaptcha.jpg" alt="reCAPTCHA">
+            </div>
+        </div>
+        <div class="widget-footer-row">
+            <a href="#">Privacidad</a>
+            <span>-</span>
+            <a href="#">Condiciones</a>
+        </div>
+    </div>
+
+    <!-- MODAL con cabecera estilo Google reCAPTCHA EXACTA -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <!-- CABECERA EXACTA GOOGLE reCAPTCHA -->
+            <header class="modal-header">
+                <div class="header-title-small">Completa el nivel de</div>
+                <h2 class="header-title-large">Geometry Dash</h2>
+                <p class="header-subtitle">Haz clic en verificar cuando termines.</p>
+                <div class="score-box">
+                    <span class="score-label">Puntos</span>
+                    <span class="score-value" id="scoreDisplay">0 / 10</span>
+                </div>
+            </header>
+            
+            <!-- ÁREA DEL JUEGO -->
+            <div class="modal-game">
+                <div class="game-wrapper">
+                    <canvas id="gameCanvas" width="320" height="200"></canvas>
+                    <div class="game-start-screen" id="gameStartScreen">
+                        <span class="start-icon">▶</span>
+                        <span class="start-title">Haz clic para jugar</span>
+                        <span class="start-hint">Espacio • Click • Touch</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FOOTER -->
+            <footer class="modal-footer">
+                <span class="status-text" id="statusText">Haz clic para comenzar</span>
+                <button class="verify-btn" id="verifyBtn" disabled>Verificar</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- SUCCESS OVERLAY -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-icon">✓</div>
+        <div class="success-text">Verificación exitosa</div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="scripts/physics.js"></script>
+    <script src="scripts/humanCheck.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
